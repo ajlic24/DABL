@@ -1,3 +1,8 @@
 body {
     background: grey;
 }
+
+#clickMe {
+    text-align: left;
+    /*background-color: white;*/
+}
