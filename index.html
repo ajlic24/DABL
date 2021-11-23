@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My Website</title>
-        <link rel="stylesheet" href="./style.css">   
-    </head>
-    <body>
-        <h1 id="clickMe">Click Me!</h1>
-        <script src="./script.js"></script>
-        
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>My Website</title>
+</head>
+<body>
+  <main id="main">
+    <h1>Tip Calculator</h1>
+    <div id="content">
+      <div id="container">
+        <div id="dollarSign">$</div>
+        <div id="input"><input id="bill" type="text" name="bill"></div>
+      </div>
+      <div id="slider">
+        Tip:<input id="tipRange" type="range" min="1" max="100" value="1" name="tipRange">
+        <p id="showPerc">0%</p>
+      </div>
+      <h3>Results</h3>
+      <div id="tipAmountContainer">
+        <div id="tipAmount">Tip Amount</div>
+        <div id="tipAmountSide"></div>
+      </div>
+      <div id="total">
+        <div id="totalText">Total Bill with Tip</div>
+        <div id="totalResult"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+  
+</body>
 </html>

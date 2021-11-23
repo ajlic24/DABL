@@ -1,15 +1,18 @@
-const h2 = document.createElement('h2');
-h2.textContent = `This content added by Javascript`;
-
-document.querySelector(`body`).appendChild(h2);
-
-const clickMe = document.getElementById(`clickMe`);
-const body = document.getElementsByTagName(`body`);
-
-clickMe.addEventListener(`click`, function(){
-    clickMe.style.textAlign = `center`;
-    h2.style.background = `black`;
-})
+let range = document.getElementById('tipRange');
+let percent = document.getElementById('showPerc');
+let bill = document.getElementById('bill');
+let tipAmountSide = document.getElementById('tipAmountSide');
+let totalResult = document.getElementById('totalResult');
 
 
+range.addEventListener('input', slideMe);
 
+
+function slideMe() {
+	percent.textContent = `${parseInt(range.value)}%`;
+	let tipAmount = bill.value * (range.value / 100);
+	tipAmountSide.textContent = `$${tipAmount}`;
+	let totalBill = parseInt(bill.value) + tipAmount;
+	totalResult.textContent = `$${totalBill}`;
+
+}
